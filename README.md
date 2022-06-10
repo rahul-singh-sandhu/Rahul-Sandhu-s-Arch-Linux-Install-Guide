@@ -10,7 +10,7 @@ First, go to archlinux.org/download/, scroll down to HTTP Direct Downloads, and 
 ![image](https://user-images.githubusercontent.com/90906486/172376617-0f20356d-def8-4b05-91e2-3099596e3b7e.png)
 Simply select the file you downloaded earlier, select your USB drive and click Flash.
 
-For Linux users, you can use dd. Simply open a terminal and type lsblk. Now look for the disk that has the same size as your USB drive and is mounted at run/media/$USER/.... Note down the name on the left hand side. In my case it is sdg. Then, type sudo dd **if=path/to/archiso of=/dev/youusbdrivelocation bs-1M status=progress**. In my case, that would be **sudo dd if=~/archlinux-2022.06.01-x86_64.iso of=/dev/sdg bs=1M status=progress**.
+For Linux users, you can use dd. Simply open a terminal and type lsblk. Now look for the disk that has the same size as your USB drive and is mounted at run/media/$USER/.... Note down the name on the left hand side. In my case it is sdg. Then, type **sudo dd if=path/to/archiso of=/dev/youusbdrivelocation bs-1M status=progress**. In my case, that would be **sudo dd if=~/archlinux-2022.06.01-x86_64.iso of=/dev/sdg bs=1M status=progress**.
 
 Lets break down this command. The **dd** is used to copy the file. The **if=** is used to specifiy the file location. The **of=** specifies the location of the drive to be copied to. **The bs=1M** tells dd to copy at 1M at a time. Finally, the **status=progress** shows how much data has been copied.
 
